@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навигация</title>
+    <link rel="stylesheet" href="desktop_navigation.css">
+    <link rel="stylesheet" href="mobile_navigation.css">
+    <script src="navigation.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle-div">
+            <svg class="menu-toggle" width="50" height="50" viewBox="0 0 139 139" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="139" height="139" fill="url(#pattern0_191_328)"/>
+                <defs>
+                <pattern id="pattern0_191_328" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_191_328" transform="scale(0.00195312)"/>
+                </pattern>
+                <image id="image0_191_328" width="512" height="512" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                </defs>
+            </svg>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span>МЕНЮ</span>
+            <button class="close-menu">✕</button>
+        </div>
+
+        <nav>
+            <ul class="menu-item">
+                <li class="about-the-school">
+                    <a href="#">
+                        <span class="icon-wrapper">
+                            <img src="images/school.png" alt="icon">
+                        </span>
+                        О школе
+                    </a>
+                    <div class="columns">
+                        <div class="columns-border"></div>
+                        <ul>
+                            <li><a href="#">Основные сведения</a></li>
+                            <li>
+                                <a href="#">
+                                    Образование
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Образование</a></li>
+                                    <li><a href="#">Образовательные стандарты и требования</a></li>
+                                    <li><a href="#">Вакантные места для приема (перевода) обучающихся</a></li>
+                                    <li><a href="#">Платные образовательные услуги</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Персоналии
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Руководство</a></li>
+                                    <li><a href="#">Структура и органы управления образовательной организацией</a></li>
+                                    <li><a href="#">Педагогический состав</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Документы</a></li>
+                            <li>
+                                <a href="#">
+                                    Условия обучения
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Материально - техническое обеспечение и оснащенность образовательного процесса. Доступная среда</a></li>
+                                    <li><a href="#">Организация питания в образовательной организации</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Финансовая информация
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Финансово-хозяйственная деятельность</a></li>
+                                    <li><a href="#">Стипендии и меры поддержки обучающихся</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Дополнительно
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Международное сотрудничество</a></li>
+                                    <li><a href="#">Трудоустройство выпускников</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="parents">
+                    <a href="#">
+                        <span class="icon-wrapper">
+                            <img src="images/parents.png" alt="icon">
+                        </span>
+                        Родителям
+                    </a>
+                    <div class="columns">
+                        <div class="columns-border"></div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Информация для родителей
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Внимание: опасность схода снега и сосулек!</a></li>
+                                    <li><a href="#">Отдых и оздоровление детей</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Порядок приема обучающихся
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Прием в 1 класс</a></li>
+                                    <li><a href="#">Правила приема граждан</a></li>
+                                    <li><a href="#">Пункт проведения тестирования иностранных граждан</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Питание (ежедневное меню)</a></li>                        
+                        </ul>
+                        <ul>
+                            <li><a href="#">Государственная итоговая аттестация</a></li>
+                            <li><a href="#">Горячие телефоны доверия</a></li>
+                            <li>
+                                <a href="#">
+                                    Обратная связь
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Форма обратной связи</a></li>
+                                    <li><a href="#">Иные дистанционные способы взаимодействия</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Часто задаваемые вопросы</a></li>
+                        </ul>
+                    </div>    
+                </li>
+
+                <li class="students">
+                    <a href="#">
+                        <span class="icon-wrapper">
+                            <img src="images/students.png" alt="icon">
+                        </span>
+                        Учащимся
+                    </a>
+                    <div class="columns">
+                        <div class="columns-border"></div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Государственная итоговая аттестация
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Итоговая аттестация для выпускников 9-х и 11-х классов</a></li>
+                                    <li><a href="#">Основная информация</a></li>
+                                    <li><a href="#">ГИA - 9</a></li>
+                                    <li><a href="#">Федеральные и региональные порталы</a></li>
+                                    <li><a href="#">Аккредитация граждан в качестве общественных наблюдателей</a></li>
+                                    <li><a href="#">Информация по ВПЛ</a></li>
+                                    <li><a href="#">Нормативные документы</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Олимпиадное движение</a></li>
+                            <li>
+                                <a href="#">
+                                    Дистанционное обучение
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Обучение с использование дистанционных образовательных технологий</a></li>
+                                    <li><a href="#">Сведения об электронных образовательных ресурсах</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>    
+                </li>
+
+                <li class="teachers">
+                    <a href="#">
+                        <span class="icon-wrapper">
+                            <img src="images/teachers.png" alt="icon">
+                        </span>
+                        Учителям
+                    </a>
+                    <div class="columns">
+                        <div class="columns-border"></div>
+                        <ul>
+                            <li><a href="#">Наставничество</a></li>
+                        </ul>
+                    </div>    
+                </li>
+
+                <li class="safety-and-health">
+                    <a href="#">
+                        <span class="icon-wrapper">
+                            <img src="images/safety-and-health.png" alt="icon">
+                        </span>
+                        Безопасность и здоровье
+                    </a>
+                    <div class="columns">
+                        <div class="columns-border"></div>
+                        <ul>
+                            <li><a href="#">Противодействие терроризму и его идеологии</a></li>
+                            <li>
+                                <a href="#">Противодействие коррупции
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">Противoдействие коррупции</a></li>
+                                    <li><a href="#">Обратная связь для сообщений о фактах коррупции</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Первая помощь</a></li>
+                            <li>
+                                <a href="#">Профилактика
+                                    <span class="arrow">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul>
+                                    <li><a href="#">"Наркотикам нет!"</a></li>
+                                    <li><a href="#">Памятка "Важно знать" и "Выход есть"</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="additional-education">
+                    <a href="#">
+                        <span class="icon-wrapper">
+                            <img src="images/additional-education.png" alt="icon">
+                        </span>
+                        Дополнительное образование
+                    </a>
+                    <div class="columns">
+                        <div class="columns-border"></div>
+                        <ul>
+                            <li><a href="#">Отделение дополнительного образования детей (ОДОД)</a></li>
+                            <li><a href="#">Школьный спортивный клуб "ВЕГА"</a></li>
+                            <li><a href="#">Центр цифрового образования «ИнфинITи»</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="overlay"></div>
+</body>
+</html>
