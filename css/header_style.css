@@ -28,7 +28,7 @@ main {
     overflow: hidden;
 }
 
-.school-logo-img {
+.school-logo-img img {
     width: 250px;
     height: auto;
 }
@@ -72,6 +72,7 @@ main {
 
 @media (max-width: 768px) {
     header {
+        overflow: hidden;
         padding: 20px 0;
     }
 
@@ -88,12 +89,17 @@ main {
     }
 
     .school-logo-img {
-        width: 200px;
+        display: flex;
+        justify-content: flex-end;
+        width: 70%;
+    }
+
+    .school-logo-img img {
+        width: 80%;
     }
     
     .school-info p {
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 2.5vw;
     }
 
     .menu-toggle {
