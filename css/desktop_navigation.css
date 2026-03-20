@@ -39,7 +39,7 @@ nav {
     width: 100%;
 }
 
-.mobile-menu a {
+.menu a {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -187,15 +187,20 @@ nav {
 
 /* Вложенные подменю */
 .columns ul li ul {
-    max-height: 0;
-    overflow: hidden;
     opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.3s ease;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease, opacity 0.5s ease;
     padding-left: 15px;
+}
+
+.columns ul li ul > * {
+    overflow: hidden;
 }
 
 .columns ul li.open > ul {
     opacity: 1;
+    grid-template-rows: 1fr;
 }
 
 .columns ul li ul li a {
