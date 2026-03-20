@@ -4,28 +4,17 @@
         padding: 0;
     }
 
-    header {
+    /*header {
         display: block;
         height: 150px;
         margin: 0;
         padding: 0;
         background-color: rgb(145, 203, 255);
-    }
+    }*/
 
     nav {
         display: none;
         justify-content: left;
-    }
-
-    .menu-toggle-div {
-        display: flex;
-        justify-content: right;
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    .menu-toggle {
-        display: block;
-        padding: 10px;
     }
 
     .menu-item {

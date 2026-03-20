@@ -10,13 +10,20 @@ body {
 }
 
 header {
-    background-image: url("blue_background.jpg"); 
+    background-image: url("../images/blue_background.jpg"); 
     background-size: cover;
     opacity: 0.8;
     border-radius: 0 0 30px 30px;
     color: white;
     padding: 20px 80px;
     display: flex;
+}
+
+main {
+    margin: 50px 100px;
+    height: 1000px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
 }
 
 .school-logo-img {
@@ -59,4 +66,36 @@ header {
 
 #glazd {
     width: 50px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+
+    .menu-toggle-div {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        padding-left: 50px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .school-logo-img {
+        width: 200px;
+    }
+    
+    .school-info p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .menu-toggle {
+        display: block;
+        padding: 10px;
+    }
+
+    .special {
+        display: none;
+    }
 }
