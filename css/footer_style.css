@@ -5,6 +5,7 @@ footer {
     display: flex;
     font-weight: bold;
     align-items: center;
+    overflow: hidden;
 }
 
 .max-icon {
