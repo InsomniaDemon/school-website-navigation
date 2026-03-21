@@ -33,8 +33,6 @@ document.querySelectorAll('.menu-item > li > a').forEach(link => {
 
         document.querySelectorAll('.menu-item > li.open').forEach(item => {
             if (item !== parentLi) {
-                const submenu = item.querySelector('ul');
-
                 item.classList.remove('open');
             }
         });
@@ -72,12 +70,6 @@ document.addEventListener('click', function(e) {
         });
         
         document.querySelectorAll('.columns ul li.open').forEach(item => {
-            const submenu = item.querySelector('ul');
-
-            if (submenu) {
-                submenu.style.maxHeight = '0';
-            }
-
             item.classList.remove('open');
         });
     }
