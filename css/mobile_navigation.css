@@ -38,29 +38,50 @@
         margin: 0;
     }
 
-    .menu-item > li.open > .columns {
+    .menu-item > li.open > .columns-wrapper > .columns-inner .columns {
         flex-direction: column;
         box-shadow: none;
         gap: 0;
+
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .columns-border {
         display: none;
     }
 
-    .columns {
+    .columns { 
         position: relative;
         top: 0;
         left: 0;
         padding: 20px 0 0 10px;
-        animation: none;
+        animation: none !important;
+
+        display: block;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .columns-wrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.4s ease;
+    }
+
+    .menu-item > li.open > .columns-wrapper {
+        grid-template-rows: 1fr;
+    }
+
+    .columns-inner {
+        overflow: hidden;
     }
 
     .columns ul li {
         max-width: none;
     }
 
-    /* затемнение фона */
     .overlay {
         position: fixed;
         top: 0;
@@ -76,11 +97,10 @@
         z-index: 998;
     }
 
-    /* само меню */
     .menu {
         position: fixed;
         top: 0;
-        right: -100%; /* скрыто справа */
+        right: -100%;
 
         width: 350px;
         max-width: 100%;

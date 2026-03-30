@@ -39,12 +39,6 @@ document.querySelectorAll('.menu-item > li > a').forEach(link => {
 
         document.querySelectorAll('.columns ul li.open').forEach(item => {
             if (item !== parentLi) {
-                const submenu = item.querySelector('ul');
-
-                if (submenu) {
-                    submenu.style.maxHeight = '0';
-                }
-
                 item.classList.remove('open');
             }
         });
@@ -52,6 +46,7 @@ document.querySelectorAll('.menu-item > li > a').forEach(link => {
         parentLi.classList.toggle('open');
     });
 });
+
 
 document.querySelectorAll('.columns ul li > a').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -75,12 +70,6 @@ document.addEventListener('click', function(e) {
         });
         
         document.querySelectorAll('.columns ul li.open').forEach(item => {
-            const submenu = item.querySelector('ul');
-
-            if (submenu) {
-                submenu.style.maxHeight = '0';
-            }
-
             item.classList.remove('open');
         });
     }
